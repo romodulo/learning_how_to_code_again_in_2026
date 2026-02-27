@@ -40,8 +40,12 @@ const myDataValue = ref([])
 <template>
     <p>What is your starting balance?: </p>
     {{ startingBalance }}
-    <input v-model="startingBalance" placeholder="What is your starting Balance?"/>
-    <button v-on:click="enterBalance">Confirm-Starting Balance</button>
+    <main class="container">
+        <input class="special" v-model="startingBalance" placeholder="What is your starting Balance?"/>
+    </main>
+    <main class="container">
+        <button v-on:click="enterBalance">Confirm-Starting Balance</button>
+    </main>
     <br>
     Starting balance is:
     {{ startingBalance }} <br>
@@ -52,4 +56,7 @@ const myDataValue = ref([])
 </template>
 
 <style scoped>
+.special {
+    width: 19%;
+}
 </style>
